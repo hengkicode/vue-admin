@@ -1,4 +1,4 @@
-<!-- 模板组件，用于模拟不同路由下的组件显示 -->
+<!-- Komponen template, digunakan untuk mensimulasikan tampilan komponen di bawah rute yang berbeda -->
 <template>
   <div class="router-template">
     <div class="template-wrap">

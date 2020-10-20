@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <div class="app-header">
-      <div class="title">后台管理系统</div>
+      <div class="title">Sistem Managemen</div>
     </div>
     <div class="app-content">
       <div class="app-nav">
         <app-nav></app-nav>
       </div>
       <div class="app-wrap">
-        <!-- 此处放置el-tabs代码 -->
+        <!-- Tempatkan kode el-tabs di sini -->
         <div class="template-tabs">
           <el-tabs
             v-model="activeIndex"
@@ -42,23 +42,23 @@ export default {
     AppNav
   },
   methods: {
-    // tab切换时，动态的切换路由
+    // peralihan tab , alihakan perutean secara dinamis
     tabClick (tab) {
       let path = this.activeIndex;
-      // 用户详情页的时候，对应了二级路由，需要拼接添加第二级路由
+      // Di Halaman detail pengguna, sesuai rute sekunder, dan rute sekunder perlu sambung
       if (this.activeIndex === '/userInfo') {
           path = this.activeIndex + '/' + this.$store.state.userInfo.name;
       }
       this.$router.push({path: path});
     },
     tabRemove (targetName) {
-      // 首页不可删除
+      // beranda tidak dapat di hapus
       if(targetName == '/') {
         return;
       }
       this.$store.commit('delete_tabs', targetName);
       if (this.activeIndex === targetName) {
-        // 设置当前激活的路由
+        // atur rote yang saat ini aktif
         if (this.options && this.options.length >= 1) {
           this.$store.commit('set_active_index', this.options[this.options.length-1].route);
           this.$router.push({path: this.activeIndex});

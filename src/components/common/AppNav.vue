@@ -1,4 +1,4 @@
-<!-- 左侧菜单导航栏组件 -->
+<!-- Komponen Bilah Navigasi Menu Kiri -->
 
 <template>
   <div class="app-nav-wrap">
@@ -18,25 +18,25 @@
     data () {
       return {
         menus: [
-          { route: '/', name: '首页'},
-          { route: '/user', name: '用户管理'},
-          { route: '/psd', name: '密码管理'},
-          { route: '/salary', name: '工资管理'},
-          { route: '/attendence', name: '考勤管理'},
-          { route: '/perform', name: '绩效管理'},
-          { route: '/admin', name: '系统管理'},
-          { route: '/feedback', name: '意见反馈'}
+          { route: '/', name: 'Home'},
+          { route: '/user', name: 'User'},
+          { route: '/psd', name: 'Password'},
+          { route: '/salary', name: 'Gaji'},
+          { route: '/attendence', name: 'Kehadiran'},
+          { route: '/perform', name: 'Kinerja'},
+          { route: '/admin', name: 'Admin'},
+          { route: '/feedback', name: 'UmpanBalik'}
         ]
       }
     },
     mounted () {
-      // 刷新时以当前路由做为tab加入tabs
+      // Tambahkan rute saat ini sebagai tab saat refresh tabs
       if (this.$route.path !== '/' && this.$route.path.indexOf('userInfo') == -1) {
-        this.$store.commit('add_tabs', {route: '/', name: '首页'});
+        this.$store.commit('add_tabs', {route: '/', name: 'Home'});
         this.$store.commit('add_tabs', {route: this.$route.path , name: this.$route.name });
         this.$store.commit('set_active_index', this.$route.path);
       } else {
-        this.$store.commit('add_tabs', {route: '/', name: '首页'});
+        this.$store.commit('add_tabs', {route: '/', name: 'Home'});
         this.$store.commit('set_active_index', '/');
         this.$router.push('/');
       }

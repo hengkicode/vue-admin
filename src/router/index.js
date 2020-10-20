@@ -6,55 +6,54 @@ import DetailInfo from '@/components/DetailInfo'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: '首页',
-      component: Template
-    },
-    {
-      path: '/user',
-      name: '用户管理',
-      component: ElementTable,
-    },
-    {
-        path: '/userInfo/:id',
-        name: '用户详情页',
-        component: DetailInfo
-    },
-    {
-      path: '/psd',
-      name: '密码管理',
-      component: Template
-    },
-    {
-      path: '/salary',
-      name: '工资管理',
-      component: Template
-    },
-    {
-      path: '/attendence',
-      name: '考勤管理',
-      component: Template
-    },
-    {
-      path: '/perform',
-      name: '绩效管理',
-      component: Template
-    },
-    {
-      path: '/admin',
-      name: '系统管理',
-      component: Template
-    },
-    {
-      path: '/feedback',
-      name: '意见反馈',
-      component: Template
-    },
-    {
-      path: '*',
-      redirect: '/'
-    }
-  ]
+    routes: [{
+            path: '/',
+            name: 'Home',
+            component: Template
+        },
+        {
+            path: '/user',
+            name: 'User',
+            component: ElementTable,
+        },
+        {
+            path: '/userInfo/:id',
+            name: 'HalamanDetail',
+            component: DetailInfo
+        },
+        {
+            path: '/psd',
+            name: 'Password',
+            component: Template
+        },
+        {
+            path: '/salary',
+            name: 'Gaji',
+            component: Template
+        },
+        {
+            path: '/attendence',
+            name: 'Kehadiran',
+            component: Template
+        },
+        {
+            path: '/perform',
+            name: 'Kinerja',
+            component: Template
+        },
+        {
+            path: '/admin',
+            name: 'Admin',
+            component: Template
+        },
+        {
+            path: '/feedback',
+            name: 'UmpanBalik',
+            component: Template
+        },
+        {
+            path: '*',
+            redirect: '/'
+        }
+    ]
 })

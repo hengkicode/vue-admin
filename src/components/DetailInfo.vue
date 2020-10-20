@@ -1,9 +1,9 @@
-<!-- 用户详情页 -->
+<!-- Halaman Detail Pengguna -->
 <template>
     <div class="detail-info">
-        <p>姓名：<span>{{userInfo.name}}</span></p>
-        <p>日期：<span>{{userInfo.date}}</span></p>
-        <p>地址：<span>{{userInfo.address}}</span></p>
+        <p>Nama：<span>{{userInfo.name}}</span></p>
+        <p>Tanggal：<span>{{userInfo.date}}</span></p>
+        <p>Alamat：<span>{{userInfo.address}}</span></p>
     </div>
 </template>
 
@@ -11,7 +11,6 @@
     export default {
         data () {
             return {
-
             };
         },
         components: {},
